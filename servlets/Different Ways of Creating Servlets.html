@@ -1,0 +1,59 @@
+
+As per the predefined library(packages javax.servlet.*, javax.servlet.Http.*) provided by the Servlet API, there are 3 ways to design servlet.<br>
+<font color=\'#0091EA\'><b>1)Implementing Servlet Interface:</b></font> <br>
+public class MyServlet implements Servlet{<br>
+	//Body of the Servlet<br>
+}<br>
+<font color=\'#0091EA\'><b>2)Extending Generic Servlet Abstract Class:</b></font> <br>
+public class MyServlet extends Genericservlet{<br>
+	//Body of the Servlet<br>
+}<br>
+<font color=\'#0091EA\'><b>3)Extending Httpservlet Abstract Class:</b></font> <br>
+public class MyServlet extends Httpservlet{<br>
+	////Body of the Servlet<br>
+}<br>
+<br>
+<font color=\'#0091EA\'><b>1)Implementing Servlet Interface:</b></font> <br>
+import java.io.*;  <br>
+import javax.servlet.*;<br>   
+public class MyServlet implements Servlet{  <br>
+	ServletConfig config=null;  <br>
+	public void init(ServletConfig config){  <br>
+	this.config=config;  <br>
+	System.out.println(\"servlet is initialized....\");  <br>
+	}  <br>
+	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException{  <br>
+	res.setContentType(\"text/html\");  <br>
+	PrintWriter out=res.getWriter();  <br>
+	out.print(\"<html><body>MyServlet Example</body></html>\");  <br>
+	}  <br>
+	public String getServletInfo(){return \"servlet info\";}  <br>
+	public ServletConfig getServletConfig(){return config;}  <br>
+	public void destroy(){System.out.println(\"servlet is destroyed....\");}  <br>
+}  <br>
+<br>
+<font color=\'#0091EA\'><b>2)Extending Generic Servlet Abstraact Class:</b></font> <br>
+import java.io.*;  <br>
+import javax.servlet.*;<br>  
+public class MyServlet extends GenericServlet{  <br>
+public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException{  <br>
+	res.setContentType(\"text/html\");  <br>
+	PrintWriter out=res.getWriter();  <br>
+	out.print(\"<html><body>MyServlet Example</body></html>\");  <br>
+	}  <br>
+} <br>
+<br>
+<font color=\'#0091EA\'><b>3)Extending Httpservlet Abstract Class:</b></font> <br>
+import javax.servlet.http.*;  <br>
+import javax.servlet.*;  <br>
+import java.io.*;  <br>
+public class MyServlet extends HttpServlet{  <br>
+public void doGet(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException  <br>
+{  <br>
+	res.setContentType(\"text/html\");<br>
+	PrintWriter out=res.getWriter();<br>
+	out.print(\"<html><body>MyServlet Example</body></html>\");    <br>
+	out.close();<br>
+	}<br>
+}   <br>
+<br><br><br><br>

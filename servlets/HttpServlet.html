@@ -1,0 +1,30 @@
+<font color=\'#0091EA\'><b>HttpServlet:</b></font> <br>
+Present in package javax.servlet.http.HttpServlet;<br>
+It is  abstract class.<br>
+It extends the GenericServlet and implements Serializable inteface.<br>
+HttpServlet uses the Http protocol for use on the web.<br>
+HttpServlet class widely used to create an Http servlet's, suitable for a websites because 
+it provides methods  to handle http specific requests such as doGet() ,doPost(),doHead() etc.<br>
+<br>
+<font color=\'#0091EA\'><b>Methods Of HttpServlet:</b></font> <br>
+<font color=\'#0091EA\'><b>public void service(ServletRequest req,ServletResponse res):</b></font> <br>
+It dispatches the request to the protected service method by converting the request and response object into http type.<br><br>
+<font color=\'#0091EA\'><b>protected void service(HttpServletRequest req, HttpServletResponse res): </b></font> <br>
+It receives the request from the service method, and dispatches the request to the doXXX() method depending on the incoming http request type.<br><br>
+<font color=\'#0091EA\'><b>protected void doGet(HttpServletRequest req, HttpServletResponse res):</b></font> <br>
+It handles the GET request. It is invoked by the web container.<br><br>
+<font color=\'#0091EA\'><b>protected void doPost(HttpServletRequest req, HttpServletResponse res):</b></font> <br>
+It handles the POST request. It is invoked by the web container.<br><br>
+<font color=\'#0091EA\'><b>protected void doHead(HttpServletRequest req, HttpServletResponse res): </b></font> <br>
+It handles the HEAD request. It is invoked by the web container.<br><br>
+<font color=\'#0091EA\'><b>protected void doOptions(HttpServletRequest req, HttpServletResponse res): </b></font> <br>
+It handles the OPTIONS request. It is invoked by the web container.<br><br>
+<font color=\'#0091EA\'><b>protected void doPut(HttpServletRequest req, HttpServletResponse res):</b></font> <br>
+It handles the PUT request. It is invoked by the web container.<br><br>
+<font color=\'#0091EA\'><b>protected void doTrace(HttpServletRequest req, HttpServletResponse res) :</b></font> <br>
+It handles the TRACE request. It is invoked by the web container.<br><br>
+<font color=\'#0091EA\'><b>protected void doDelete(HttpServletRequest req, HttpServletResponse res):</b></font> <br>
+It handles the DELETE request. It is invoked by the web container.<br><br>
+<font color=\'#0091EA\'><b>protected long getLastModified(HttpServletRequest req): </b></font> <br>
+It returns the time when HttpServletRequest was last modified since midnight January 1, 1970 GMT.<br><br>
+<br><br><br><br>

@@ -1,0 +1,34 @@
+<font color=\'#0091EA\'><b>GenericServlet Class:</b></font> <br>
+Present in package javax.servlet.GenericServlet;<br>
+It is abstract class.<br>
+It implements Servlet interface,ServletConfig inteface, Serializable inteface.<br>
+It provides the implemetation to all the methods except the service method.<br>
+GenericServlet can handle any type of requests, so it is protocol-independent.<br>
+You may create a servlet by inheriting the Genericservlet class and providing the implementation of the service method.<br>
+<br>
+<font color=\'#0091EA\'><b>Methods of GenericServlet Interface:</b></font> <br>
+<font color=\'#0091EA\'><b>public void init(ServletConfig config) :</b></font> <br>
+It is used to initialize the servlet.<br><br>
+<font color=\'#0091EA\'><b>public abstract void service(ServletRequest request, ServletResponse response) :</b></font> <br>
+It provides service for the incoming request. It is invoked at each time when user requests for a servlet.<br><br>
+<font color=\'#0091EA\'><b>public void destroy(): </b></font> <br>
+It is invoked only once throughout the life cycle and indicates that servlet is being destroyed.<br><br>
+<font color=\'#0091EA\'><b>public ServletConfig getServletConfig():</b></font> <br>
+It returns the object of ServletConfig.<br><br>
+<font color=\'#0091EA\'><b>public String getServletInfo():</b></font> <br>
+It  returns information about servlet such as writer, copyright, version etc.<br><br>
+<font color=\'#0091EA\'><b>public String getServletName():</b></font> <br>
+It returns the name of the servlet object.<br><br>
+<font color=\'#0091EA\'><b>public void log(String msg):</b></font> <br>
+It  writes the given message in the servlet log file.<br><br>
+<font color=\'#0091EA\'><b>public void log(String msg,Throwable t):</b></font> <br>
+It writes the explanatory message in the servlet log file and a stack trace.<br><br>
+<font color=\'#0091EA\'><b>public void init():</b></font> <br>
+It is a convenient method for the servlet programmers, now there is no need to call super.init(config)<br><br>
+<font color=\'#0091EA\'><b>public ServletContext getServletContext():</b></font> <br>
+It returns the object of ServletContext.<br><br>
+<font color=\'#0091EA\'><b>public String getInitParameter(String name) :</b></font> <br>
+It returns the parameter value for the given parameter name.<br><br>
+<font color=\'#0091EA\'><b>public Enumeration getInitParameterNames(): </b></font> <br>
+It returns all the parameters defined in the web.xml file.<br><br>
+<br><br><br><br>
